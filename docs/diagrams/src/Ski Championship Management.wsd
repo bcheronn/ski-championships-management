@@ -1,0 +1,95 @@
+@startmindmap "Ski Championships Management Mind Map"
+* SCM
+** Epreuve
+** Création des données
+*** Saisie des compétiteurs
+@endmindmap
+
+@startuml "Ski Championships Management Class Diagramm"
+hide empty members
+caption Ski Championships Management\nClass Diagramm
+footer Bertrand C
+header Last updated 13/10/2020
+title Ski Championships\nManagement
+
+namespace Scm {
+    'note "This is a floating note\n<b>in case I need it</b>" as N1
+
+    class Event
+    {
+        -id: int
+        -location: string
+        -startDate: DateTime
+        -endDate: DateTime0
+        +createEvent(): Event
+        +updateEvent() 
+        +deleteEvent(): bool
+        +{static}listEvents(): Event[]
+        +exportEvent(): bool
+        +importEvent(): bool
+    }
+
+    class Competitor
+    {
+        -id: int
+        -lastName: string
+        -firstName: string
+        -birthDate: DateTime
+        -email: string
+        -photo: resource
+        +createCompetitor(): Competitor
+        +updateCompetitor()
+        +deleteCompetitor(): bool
+        +{static}listCompetitors(): Competitor[]
+    }
+
+    class Run
+    {
+        -id: int
+        -number: int
+        -time: string
+        +createRun(): Run
+        +deleteRun(): bool
+    }
+
+    class Result
+    {
+        -id: int
+        -time: string
+        +createResult(): Result
+        +deleteResult(): bool
+        +{static}listResults(): Result[]
+    }
+
+    abstract Metadata
+    {
+        -id: int
+        -name: string
+        -description: string
+    }
+
+    class Category
+    {
+        +createCategory(): Category
+        +updateCategory()
+        +deleteCategory(): bool
+        +{static}listCategories(): Category[]
+    }
+
+    class Profile
+    {
+        +createProfile(): Profile
+        +updateProfile()
+        +deleteProfile(): bool
+        +{static}listProfiles(): Profile[]
+    }
+
+    (Event, Competitor) "1" *.. "1" Result : obtains
+    Event "1" *-- "0..n" Competitor : < takes part
+    (Event, Competitor) "1" *.. "0..2" Run : runs
+    Metadata <|-l- Category
+    Metadata <|-r- Profile
+    Competitor "1..n" o-- "1" Category : belongs to >
+    Competitor "1..n" o-- "1" Profile : has >
+}
+@enduml
