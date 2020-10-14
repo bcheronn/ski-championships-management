@@ -5,11 +5,11 @@
 *** Saisie des compétiteurs
 @endmindmap
 
-@startuml "Ski Championships Management Class Diagramm"
+@startuml "Ski Championships Management Class Diagram"
 hide empty members
-caption Ski Championships Management\nClass Diagramm
+caption Ski Championships Management\nClass Diagram
 footer Bertrand C
-header Last updated 13/10/2020
+header Last updated 14/10/2020
 title Ski Championships\nManagement
 
 namespace Scm {
@@ -66,21 +66,18 @@ namespace Scm {
         -id: int
         -name: string
         -description: string
+        +createMetadata()
+        +updateMetadata()
+        +deleteMetadata(): bool
     }
 
     class Category
     {
-        +createCategory(): Category
-        +updateCategory()
-        +deleteCategory(): bool
         +{static}listCategories(): Category[]
     }
 
     class Profile
     {
-        +createProfile(): Profile
-        +updateProfile()
-        +deleteProfile(): bool
         +{static}listProfiles(): Profile[]
     }
 
