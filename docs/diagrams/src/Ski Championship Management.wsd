@@ -9,7 +9,7 @@
 hide empty members
 caption Ski Championships Management\nClass Diagram
 footer Bertrand C
-header Last updated 14/10/2020
+header Last updated 15/10/2020
 title Ski Championships\nManagement
 
 namespace Scm {
@@ -21,12 +21,12 @@ namespace Scm {
         -location: string
         -startDate: DateTime
         -endDate: DateTime0
-        +createEvent(): Event
-        +updateEvent() 
-        +deleteEvent(): bool
-        +{static}listEvents(): Event[]
-        +exportEvent(): bool
-        +importEvent(): bool
+        +create(): Event
+        +update()
+        +delete(): bool
+        +{static}list(): Event[]
+        +export(): bool
+        +import(): bool
     }
 
     class Competitor
@@ -37,10 +37,10 @@ namespace Scm {
         -birthDate: DateTime
         -email: string
         -photo: resource
-        +createCompetitor(): Competitor
-        +updateCompetitor()
-        +deleteCompetitor(): bool
-        +{static}listCompetitors(): Competitor[]
+        +create(): Competitor
+        +update()
+        +delete(): bool
+        +{static}list(): Competitor[]
     }
 
     class Run
@@ -48,37 +48,36 @@ namespace Scm {
         -id: int
         -number: int
         -time: string
-        +createRun(): Run
-        +deleteRun(): bool
+        +create(): Run
+        +delete(): bool
     }
 
     class Result
     {
         -id: int
         -time: string
-        +createResult(): Result
-        +deleteResult(): bool
-        +{static}listResults(): Result[]
+        +create(): Result
+        +delete(): bool
+        +{static}list(): Result[]
     }
 
     abstract Metadata
     {
-        -id: int
-        -name: string
-        -description: string
-        +createMetadata()
-        +updateMetadata()
-        +deleteMetadata(): bool
+        #id: int
+        #name: string
+        #description: string
+        #create()
+        #update()
+        #delete(): bool
+        #list
     }
 
     class Category
     {
-        +{static}listCategories(): Category[]
     }
 
     class Profile
     {
-        +{static}listProfiles(): Profile[]
     }
 
     (Event, Competitor) "1" *.. "1" Result : obtains
