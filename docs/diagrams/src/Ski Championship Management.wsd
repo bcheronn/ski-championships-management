@@ -48,6 +48,10 @@ namespace Scm {
         -id: int
         -number: int
         -time: float
+        --
+        ..Getters and setters..
+        +getId()
+        ..Other methods..
         +create(): Run
         +delete(): bool
     }
