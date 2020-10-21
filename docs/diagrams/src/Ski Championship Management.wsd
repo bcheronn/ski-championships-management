@@ -20,7 +20,7 @@ namespace Scm {
         -id: int
         -location: string
         -startDate: DateTime
-        -endDate: DateTime0
+        -endDate: DateTime
         +create(): Event
         +update()
         +delete(): bool
@@ -45,7 +45,6 @@ namespace Scm {
 
     class Run
     {
-        -id: int
         -number: int
         -time: float
         --
@@ -58,8 +57,7 @@ namespace Scm {
 
     class Result
     {
-        -id: int
-        -time: string
+        -time: float
         +create(): Result
         +delete(): bool
         +{static}list(): Result[]
@@ -89,7 +87,7 @@ namespace Scm {
     (Event, Competitor) "1" *.. "0..2" Run : runs
     Metadata <|-l- Category
     Metadata <|-r- Profile
-    Competitor "1..n" o-- "1" Category : belongs to >
-    Competitor "1..n" o-- "1" Profile : has >
+    Competitor "0..n" o-- "1" Category : belongs to >
+    Competitor "0..n" o-- "1" Profile : has >
 }
 @enduml
