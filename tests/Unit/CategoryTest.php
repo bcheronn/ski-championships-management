@@ -1,4 +1,10 @@
-<?php declare(strict_types=1);
+<?php
+
+/**
+ *
+ */
+
+declare(strict_types=1);
 
 namespace Scm\Tests\Unit;
 
@@ -7,6 +13,7 @@ use Scm\Model\Category;
 /**
  * Initial test to validate Pest and phpunit-watcher
  */
+
 it('should work')->assertTrue(true);
 
 /**

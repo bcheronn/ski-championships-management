@@ -37,7 +37,6 @@ try {
     $response = new Response();
 
     if ($params[0] !== null) {
-
         $controller = $params[0];
         $action = $params[1];
         $controller = new $controller();

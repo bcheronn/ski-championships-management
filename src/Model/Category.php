@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace Scm\Model;
 
@@ -7,8 +9,16 @@ namespace Scm\Model;
  */
 class Category extends Metadata
 {
-    public function create(){}
-    public function update(){}
-    public function delete(){}
-    public function list(){}
+    public function create()
+    {
+    }
+    public function update()
+    {
+    }
+    public function delete()
+    {
+    }
+    public function list()
+    {
+    }
 }
