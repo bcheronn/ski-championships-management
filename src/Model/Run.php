@@ -1,6 +1,6 @@
-<?php
+<?php declare(strict_types=1);
 
-namespace Scm;
+namespace Scm\Model;
 
 class Run{
     private int $id;

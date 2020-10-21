@@ -1,8 +1,8 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scm\Tests\Unit;
 
-use Scm\Category;
+use Scm\Model\Category;
 
 /**
  * Initial test to validate Pest and phpunit-watcher

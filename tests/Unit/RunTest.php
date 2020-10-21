@@ -1,8 +1,8 @@
-<?php
+<?php declare(strict_types=1);
 
 namespace Scm\Tests\Unit;
 
-use Scm\Run;
+use Scm\Model\Run;
 
 /**
  * Assert that it is an instance of Class
