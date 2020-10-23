@@ -22,8 +22,8 @@ DROP TABLE IF EXISTS `event`;
 CREATE TABLE IF NOT EXISTS `event` (
   `id` int NOT NULL AUTO_INCREMENT,
   `location` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `start_date` datetime NOT NULL,
-  `end_date` datetime NOT NULL,
+  `start_date` date NOT NULL,
+  `end_date` date NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE = InnoDB AUTO_INCREMENT = 15 DEFAULT CHARSET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
 -- --------------------------------------------------------
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `competitor` (
   `profile_id` int NOT NULL,
   `last_name` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
   `first_name` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `birth_date` datetime NOT NULL,
+  `birth_date` date NOT NULL,
   `email` varchar(320) COLLATE utf8mb4_unicode_ci NOT NULL,
   `photo` varchar(2048) COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`id`),
@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS `run` (
   `event_id` int NOT NULL,
   `competitor_id` int NOT NULL,
   `number` int NOT NULL,
-  `time` float NOT NULL,
+  `time` time(6) NOT NULL,
   PRIMARY KEY (`event_id`, `competitor_id`),
   KEY `IDX_EVENT_ID` (`event_id`),
   KEY `IDX_COMPETITOR_ID` (`competitor_id`)
@@ -90,7 +90,7 @@ DROP TABLE IF EXISTS `result`;
 CREATE TABLE IF NOT EXISTS `result` (
   `event_id` int NOT NULL,
   `competitor_id` int NOT NULL,
-  `time` float NOT NULL,
+  `time` time(6) NOT NULL,
   PRIMARY KEY (`event_id`, `competitor_id`),
   KEY `IDX_EVENT_ID` (`event_id`),
   KEY `IDX_COMPETITOR_ID` (`competitor_id`)

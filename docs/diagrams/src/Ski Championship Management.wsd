@@ -19,8 +19,8 @@ namespace Scm {
     {
         -id: int
         -location: string
-        -startDate: DateTime
-        -endDate: DateTime
+        -startDate: Date
+        -endDate: Date
         +create(): Event
         +update()
         +delete(): bool
@@ -34,7 +34,7 @@ namespace Scm {
         -id: int
         -lastName: string
         -firstName: string
-        -birthDate: DateTime
+        -birthDate: Date
         -email: string
         -photo: resource
         +create(): Competitor
@@ -46,7 +46,7 @@ namespace Scm {
     class Run
     {
         -number: int
-        -time: float
+        -time: Time
         --
         ..Getters and setters..
         +getId()
@@ -57,7 +57,7 @@ namespace Scm {
 
     class Result
     {
-        -time: float
+        -time: Time
         +create(): Result
         +delete(): bool
         +{static}list(): Result[]
