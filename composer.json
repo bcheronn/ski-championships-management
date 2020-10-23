@@ -2,6 +2,7 @@
   "name": "bcheronn/ski-championships-management",
   "description": "Ski Championships Management package",
   "type": "project",
+  "license": "AGPL-3.0-or-later",
   "authors": [
     {
       "name": "Bertrand C",
