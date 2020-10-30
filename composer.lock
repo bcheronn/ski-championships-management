@@ -96,22 +96,6 @@
             "time": "2020-10-23T06:02:30+00:00"
         },
         {
-<<<<<<< HEAD
-            "name": "symfony/apache-pack",
-            "version": "v1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/apache-pack.git",
-                "reference": "3aa5818d73ad2551281fc58a75afd9ca82622e6c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/apache-pack/zipball/3aa5818d73ad2551281fc58a75afd9ca82622e6c",
-                "reference": "3aa5818d73ad2551281fc58a75afd9ca82622e6c",
-                "shasum": ""
-            },
-            "type": "symfony-pack",
-=======
             "name": "symfony/config",
             "version": "v5.1.8",
             "source": {
@@ -154,15 +138,10 @@
                     "/Tests/"
                 ]
             },
->>>>>>> feature/new-index
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-<<<<<<< HEAD
-            "description": "A pack for Apache support in Symfony",
-            "time": "2017-12-12T01:46:35+00:00"
-=======
             "authors": [
                 {
                     "name": "Fabien Potencier",
@@ -190,7 +169,6 @@
                 }
             ],
             "time": "2020-10-24T12:01:57+00:00"
->>>>>>> feature/new-index
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -3834,8 +3812,6 @@
                 "spatie"
             ],
             "time": "2020-10-27T07:36:25+00:00"
-<<<<<<< HEAD
-=======
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -3887,7 +3863,6 @@
                 "standards"
             ],
             "time": "2020-10-23T02:01:07+00:00"
->>>>>>> feature/new-index
         },
         {
             "name": "symfony/console",
