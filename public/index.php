@@ -35,11 +35,10 @@ try {
     );
 
     // Find the controller in the set of routes from the URL
-    $controller = $router->match($context->getPathInfo());
-    dump($controller);
+    $configuredRoute = $router->match($context->getPathInfo());
 
     // Initialise the response
-    $response = new Response("OK");
+    $response = call_user_func_array($configuredRoute["_controller"], []);
 } catch (ResourceNotFoundException $exception) {
     $response = new Response("Not Found", 404);
 } catch (Exception $exception) {

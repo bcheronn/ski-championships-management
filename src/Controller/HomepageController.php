@@ -18,9 +18,8 @@ class HomepageController // extends AbstractController implements ControllerInte
      *
      * @param Type $var Description
      * @return Response
-     * @throws condition
      **/
-    public function index(): Response
+    final public static function index(): Response
     {
         return new Response("Index");
     }
