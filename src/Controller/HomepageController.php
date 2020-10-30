@@ -17,11 +17,11 @@ class HomepageController // extends AbstractController implements ControllerInte
      * Manage the homepage for the SCM app
      *
      * @param Type $var Description
-     * @return type
-     * @throws conditon
+     * @return Response
+     * @throws condition
      **/
-    public function index()
+    public function index(): Response
     {
-        return new Response("OK", 200);
+        return new Response("Index");
     }
 }
