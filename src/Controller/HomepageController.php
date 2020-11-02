@@ -3,6 +3,8 @@
 namespace Scm\Controller;
 
 use Symfony\Component\HttpFoundation\Response;
+use Twig\Environment;
+use Twig\Loader\FilesystemLoader;
 
 /**
  * class HomepageController
@@ -21,6 +23,9 @@ class HomepageController // extends AbstractController implements ControllerInte
      **/
     final public static function index(): Response
     {
-        return new Response("Index");
+        $loader = new FilesystemLoader("../src/View");
+        $twig = new Environment($loader);
+
+        return new Response($twig->render("template.html.twig"));
     }
 }
