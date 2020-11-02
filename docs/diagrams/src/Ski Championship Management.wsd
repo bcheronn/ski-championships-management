@@ -35,6 +35,7 @@ namespace Scm {
         -lastName: string
         -firstName: string
         -birthDate: Date
+        -bibNumber: int
         -email: string
         -photo: resource
         +create(): Competitor

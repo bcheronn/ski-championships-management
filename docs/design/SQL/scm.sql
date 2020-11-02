@@ -39,6 +39,7 @@ CREATE TABLE IF NOT EXISTS `competitor` (
   `last_name` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
   `first_name` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
   `birth_date` date NOT NULL,
+  `bib_number` smallint,
   `email` varchar(320) COLLATE utf8mb4_unicode_ci NOT NULL,
   `photo` varchar(2048) COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`id`),
