@@ -11,7 +11,7 @@ use Twig\Loader\FilesystemLoader;
  *
  * @author Bertrand C <66913901+bcheronn@users.noreply.github.com>
  */
-class HomepageController // extends AbstractController implements ControllerInterface
+class HomepageController // extends AbstractController // implements ControllerInterface
 {
     /**
      * index function
